@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Pulling in jquery to implement the scroll-to buttons -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <img src="Logo-impera-Header.png" class="impera-logo"/>
+        <!-- Header navigation bar -->
+        <ul class="nav-bar">
+          <li>HOME</li>
+          <li>BRANDS</li>
+          <li>PRODUCTS</li>
+          <li>ABOUT US</li>
+          <li>CONTACT</li>
+        </ul>
+      </div>
+      <div class="banner">
+        <h1>PROVIDING REMARKABLE DECOR</h1>
+        <div class="header-description"> Serving 3358 clients in 15 countries with Venetian
+          and other eco-friendly decorative plasters,
+          metallic finishes, tools and protectors
+
+        </div>
+        <div class="buttons">
+          <!-- Button links to the brands section -->
+          <div class="brands-button button" onClick="scrollToBrands();">OUR BRANDS</div>
+          <!-- Button links to the products section -->
+          <div class="products-button button" onClick="scrollToProducts();">OUR PRODUCTS</div>
+        </div>
+      </div>
+
+      <!-- Brands section -->
+       <div class="our-brands">
+        <h1>OUR BRANDS</h1>
+        <div class="brands-description">
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+        </div>
+
+        <div class="brand">
+          <img src='brands/Loggia.jpg'>
+          <!-- Image was used to show the background picture. -->
+          <hr>
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+          <hr>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="brand">
+          <img src='brands/SanMarco.jpg'>
+          <hr>
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+          <hr>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+
+        <!-- Created a discover-button to underneath the sub-heading to show the button there. -->
+        <div class="brand">
+          <img src='brands/GiorgioGraesan.jpg'>
+          <hr>
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+          <hr>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+
+        <div class="brand">
+          <img src='brands/SanMarinese.jpg'>
+          <hr>
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+          <hr>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+
+        <div class="brand">
+          <img src='brands/Arreghini.jpg'>
+          <hr>
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+          <hr>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+      </div>
+
+      <!-- Products section -->
+      <div class="our-products">
+        <h1>OUR PRODUCTS</h1>
+        <div class="products-description">
+          Lorem ipsum sit amet. ut has elitr noluisse volupyua doming alienum ex usu vel ancillae rationibus.
+        </div>
+        <!-- sub-heading names are listed below with the pictures-->
+        <div class="product">
+          <img src='products/01-Decorative.png'>
+          <div class="product-header">DECORATIVE PLASTERS</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="product">
+          <img src='products/02-Metallic.png'>
+          <div class="product-header">METALLIC FINISHES</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="product">
+          <img src='products/06-Others.png'>
+          <div class="product-header">OTHER PRODUCTS</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="product">
+          <img src='products/03-Protectors.png'>
+          <div class="product-header">PROTECTORS</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="product">
+          <img src='products/05-Preparation.png'>
+          <div class="product-header">SURFACE PREPARATION</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+        <div class="product">
+          <img src='products/04-Tools.png'>
+          <div class="product-header">TOOLS</div>
+          <div class="product-description">Stucco, Grassello, Lucido, Marmorino, Travettino and many others</div>
+          <div class="discover-button">DISCOVER</div>
+        </div>
+      </div>
+      <div class="footer">
+        <img src="Logo-impera-Footer.min.svg" class="impera-logo"/>
+        <ul>
+          <li>SEARCH</li>
+          <li>ABOUT US</li>
+          <li>PRIVACY POLICY</li>
+          <li>TERMS AND CONDITIONS</li>
+          <li>RETURN POLICY</li>
+        </ul>
+        <p>Copyright &copy;2015 Impera Italian Finishes, London</p>
+      </div>
+
+    </div>
+    <script type="text/javascript">
+      var scrollTo;
+
+      // scroll to brands when clicking button
+      var scrollToBrands = function() {
+        scrollTo = $('.our-brands');
+        $("html, body").animate({scrollTop: scrollTo.offset().top - $("html, body").offset().top, scrollLeft: 0},300);
+      }
+
+      // Function above gives the user the access to scroll down to the products page and brands page
+      // scroll to products when clicking button
+      var scrollToProducts = function() {
+        scrollTo = $('.our-products');
+        $("html, body").animate({scrollTop: scrollTo.offset().top - $("html, body").offset().top, scrollLeft: 0},300);
+      }
+    </script>
+  </body>
+</html>
